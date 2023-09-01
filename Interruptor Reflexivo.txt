@@ -1,0 +1,15 @@
+int pinLed = 12; // led conectado no pino digital 12
+int pinSensor = 2; // foto transistor conectado no pino digital 2
+   
+void setup(){ 
+  pinMode(pinSensor, INPUT); // define como entrada 
+  pinMode(pinLed, OUTPUT); // define como saída   
+  digitalWrite(pinLed, LOW); // led inicia apagado
+}    
+void loop(){
+  if (digitalRead(pinSensor) == LOW){ 
+        digitalWrite(pinLed, HIGH); // acende o led
+  }else{
+        digitalWrite(pinLed, LOW); // apaga o led
+  }    
+}
